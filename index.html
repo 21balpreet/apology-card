@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="B:\card final\background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="flip-sound">
+        <source src="B:\card final\flip.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="card-container">
+        <div class="card">
+            <!-- Front Page -->
+            <div class="front">
+                <h1 class="sorry-text">I'm really sorry!</h1>
+                <img src="B:\card final\pleading.jpg" alt="Sorry" class="card-image">
+                <button onclick="flipToPage(1)">Open Card</button>
+            </div>
+            <div class="inner">
+                <!-- Page 1 -->
+                <div class="page page-left" id="page1">
+                    <h2>Why you should forgive me?</h2>
+                    <p class="para7">I know I messed up, and I hate that it hurt you. 
+                        I didn't want to make you feel any less valued and that was never my intention. 
+                        You’re really important to me, and just know that your place in my life is irreplaceable.
+                        Let me make it up to you in any way that actually matters to you.❤️<p>
+                    <br>
+                    <p>Dancing video on <b>NEXT</b> page. 👉🏻</p>
+                    <button onclick="nextPage(2)">Next</button>
+                </div>
+
+                <!-- Page 2 -->
+                <div class="page page-right" id="page2">
+                    <h2>A Video Apology</h2>
+                    <p>jk</p>
+                    <video class="apology-video" controls>
+                        <source src="B:\card final\apology-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p></p>
+                    <button onclick="prevPage(1)">Previous</button>
+                    <button onclick="nextPage(3)">Next</button>
+                </div>
+
+                <!-- Page 3 -->
+                <div class="page page-left" id="page3">
+                    <h2>Another Sorry Note</h2>
+                    <p>I promise to make it up to you. Please accept my apology!</p>
+                    <button onclick="prevPage(2)">Previous</button>
+                    <button onclick="nextPage(4)">Next</button>
+                </div>
+
+                <!-- Last Page -->
+                <div class="page page-right" id="page4">
+                    <h2>From: Gayman Ballz</h2>
+                    <p class="name">Apology accept krke call kro varna:</p>
+                    <img src="B:\card final\maara-jayega.jpeg" alt="Sorry" class="card-image">
+                    <button onclick="prevPage(3)">Previous</button>
+                    <button onclick="resetCard()">Close Card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Play/Pause Button -->
+    <button id="music-toggle" class="music-button">Pause Music</button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
